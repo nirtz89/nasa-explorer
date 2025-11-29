@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from './lib/utils';
 
-const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Wrapper: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => {
   return (
-    <div className="wrapper">
+    <div className={cn("wrapper", className)}>
       {children}
     </div>
   );

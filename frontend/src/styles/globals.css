@@ -119,90 +119,90 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Alegreya Sans", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 }
 
-.alegreya-sans-thin {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-thin {
+  font-family: "Inter", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
-.alegreya-sans-light {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-light {
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-.alegreya-sans-regular {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-regular {
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.alegreya-sans-medium {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-medium {
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.alegreya-sans-bold {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-bold {
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.alegreya-sans-extrabold {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-extrabold {
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
 
-.alegreya-sans-black {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-black {
+  font-family: "Inter", sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 
-.alegreya-sans-thin-italic {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-thin-italic {
+  font-family: "Inter", sans-serif;
   font-weight: 100;
   font-style: italic;
 }
 
-.alegreya-sans-light-italic {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-light-italic {
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
-.alegreya-sans-regular-italic {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-regular-italic {
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
-.alegreya-sans-medium-italic {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-medium-italic {
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
-.alegreya-sans-bold-italic {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-bold-italic {
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
-.alegreya-sans-extrabold-italic {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-extrabold-italic {
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   font-style: italic;
 }
 
-.alegreya-sans-black-italic {
-  font-family: "Alegreya Sans", sans-serif;
+.inter-black-italic {
+  font-family: "Inter", sans-serif;
   font-weight: 900;
   font-style: italic;
 }

@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Alegreya Sans"', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
       },
       animation: {
         aurora: "aurora 60s linear infinite",
