@@ -80,17 +80,6 @@ const SearchChat: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch 
         }, 1500);
     };
 
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            e.stopPropagation();
-            onSearch(inputValue.trim());
-
-            handleSendMessage();
-            return false;
-        }
-    };
-
     const handleChangeInputValue = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setInputValue(e.target.value);
         if (e.nativeEvent instanceof InputEvent && e.nativeEvent.inputType === "insertLineBreak") {
@@ -144,7 +133,6 @@ const SearchChat: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch 
                 <Textarea
                     value={inputValue}
                     onChange={handleChangeInputValue}
-                    onKeyDown={handleKeyDown}
                     placeholder="What would you like to change?"
                     className="w-full h-[150px] bg-white border border-[#B7B7B7] rounded-[16px] p-[16px] outline-none resize-none"
                 />

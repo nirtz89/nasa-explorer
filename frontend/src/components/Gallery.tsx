@@ -22,7 +22,6 @@ const Gallery: React.FC = () => {
   };
 
   const getFullSizeImage = (item: typeof items[0]): ImageData | null => {
-    // Try to get large image first, then medium, then fallback to thumbnail
     const largeImage = item.links?.find(link => link.rel === 'alternate' && link.href?.includes('~large'));
     const mediumImage = item.links?.find(link => link.rel === 'alternate' && link.href?.includes('~medium'));
     const thumbnail = item.links?.find(link => link.rel === 'preview');

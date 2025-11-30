@@ -30,10 +30,16 @@ const HistoryDrawer: React.FC = () => {
   };
 
   const restoreQuery = (query: string) => {
-    setSearchQuery('');
     setSearchQuery(query);
     setAppState(AppState.SEARCH);
   };
+
+  const handleResetHistory = () => {
+    setHistory([]);
+    replaceFullHistoryInLocalStorage([]);
+    setCurrentPage(1);
+  };
+  
   const totalPages = Math.ceil(history.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
@@ -59,11 +65,11 @@ const HistoryDrawer: React.FC = () => {
         </DrawerClose>
       </DrawerHeader>
       <div className="flex flex-col w-full p-4">
-        <div className="flex items-center px-4 py-2 mb-3">
+        <div className="flex items-center gap-2 px-4 py-2 mb-3">
           <input
             type="text"
             placeholder="Search history..."
-            className="text-sm border border-gray-200 rounded-md px-3 py-1 w-full focus:outline-none focus:border-blue-400 text-black bg-white"
+            className="text-sm border border-gray-200 rounded-md px-3 py-1 flex-1 focus:outline-none focus:border-blue-400 text-black bg-white"
             onChange={(e) => {
               const searchTerm = e.target.value.toLowerCase();
               const filtered = getHistoryFromLocalStorage().filter((item: HistoryItem) =>
@@ -72,6 +78,16 @@ const HistoryDrawer: React.FC = () => {
               setHistory(filtered);
             }}
           />
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleResetHistory}
+            disabled={history.length === 0}
+            className="text-gray-600 hover:text-red-600 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <Trash2 className="w-4 h-4" />
+            Reset
+          </Button>
         </div>
         <div className="flex flex-col w-full overflow-y-auto h-[calc(100vh-250px)]">
           {paginatedHistory.length > 0 && paginatedHistory.map((item) => {
@@ -93,9 +109,11 @@ const HistoryDrawer: React.FC = () => {
                   <Button variant="ghost" size="icon-sm" onClick={() => handleDeleteHistory(item.timestamp)} className="text-gray-400 hover:text-red-500">
                     <Trash2 className="w-4 h-4" />
                   </Button>
-                  <Button variant="ghost" size="icon-sm" onClick={() => restoreQuery(item.query)} className="text-gray-400 hover:text-blue-500">
-                    <RotateCcw className="w-4 h-4" />
-                  </Button>
+                  <DrawerClose asChild>
+                    <Button variant="ghost" size="icon-sm" onClick={() => restoreQuery(item.query)} className="text-gray-400 hover:text-blue-500">
+                      <RotateCcw className="w-4 h-4" />
+                    </Button>
+                  </DrawerClose>
                 </div>
               </div>
             );
