@@ -13,10 +13,10 @@ const HeroHeading: React.FC = () => {
       }}
       className="relative flex flex-col gap-2 items-center justify-center px-4"
     >
-      <div className="text-[58px] max-w-[900px] font-normal font-bold text-[#111725] text-center pt-0 -mt-[70px] flex items-center justify-center gap-2">
+      <div className="text-[58px] max-w-[900px] font-normal text-[#111725] text-center pt-0 -mt-[70px] flex items-center justify-center gap-2">
         What are you searching for today?
       </div>
-      <div className="text-lg md:text-xl text-[#B7B7B7] text-center">
+      <div className="text-lg md:text-xl text-[#727272] text-center">
         Your vision, with AI without limits.
       </div>
     </motion.div>

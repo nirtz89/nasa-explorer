@@ -2,10 +2,21 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Textarea } from './ui/textarea';
 import TypingText from './ui/shadcn-io/typing-text';
+import { AppState, useAppContext } from '../AppContext';
 
 const SearchInput: React.FC = () => {
   const [focused, setFocused] = useState(false);
   const [value, setValue] = useState('');
+  const { setAppState } = useAppContext();
+
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setValue(e.target.value);
+    if (e.nativeEvent instanceof InputEvent && e.nativeEvent.inputType === "insertLineBreak") {
+      setAppState(AppState.SEARCH);
+      e.preventDefault();
+      return;
+    }
+  };
 
   return (
     <motion.div
@@ -24,7 +35,7 @@ const SearchInput: React.FC = () => {
           className="relative z-10 w-[792px] h-[150px] bg-white dark:bg-white dark:text-black focus:outline-none outline-none ring-0 focus:ring-0 focus-visible:ring-0 rounded-[16px] p-6 resize-none text-lg md:text-xl text-[#000042] placeholder:text-[#000042] shadow-sm border-none"
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => handleChange(e)}
         />
         <motion.div
           animate={{ opacity: focused || (!focused && value.length > 0) ? 0 : 1 }}

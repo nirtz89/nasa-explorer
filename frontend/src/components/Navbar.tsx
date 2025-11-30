@@ -9,7 +9,6 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 z-50 w-full bg-transparent backdrop-blur supports-[backdrop-filter]:bg-transparent">
       <div className="px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo on the left */}
           <div className="flex items-center gap-4">
             <img 
               src={NASA_LOGO} 
@@ -23,7 +22,6 @@ const Navbar: React.FC = () => {
             </DrawerTrigger>
           </div>
 
-          {/* User avatar on the right */}
           <div className="flex items-center gap-2">
             <Button variant="outline" size="icon" className="rounded-full bg-white hover:bg-gray-100 border-gray-300">
               <User className="w-5 h-5 text-gray-800" />

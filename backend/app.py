@@ -1,4 +1,4 @@
-from typing import List
+from typing import Dict, List, Optional
 
 from data.db import SpaceDB
 from fastapi import FastAPI
@@ -21,4 +21,9 @@ db = SpaceDB()
 @app.get("/api/sources", response_model=List[Source])
 def get_sources():
     sources = db.get_all_sources()
+    return sources
+
+@app.get("/api/sources/raw", response_model=List[Dict])
+def get_sources_raw(searchTerm: Optional[str] = None):
+    sources = db.get_all_sources_raw(search_term=searchTerm)
     return sources
