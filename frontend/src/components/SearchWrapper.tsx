@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchChat from './SearchChat';
 import SearchResponse from './SearchResponse';
 import { useAppContext } from '../AppContext';
@@ -6,6 +6,10 @@ import { useAppContext } from '../AppContext';
 const SearchWrapper: React.FC = () => {
     const { searchQuery: initialSearchQuery } = useAppContext();
     const [searchQuery, setSearchQuery] = useState<string>(initialSearchQuery);
+
+    useEffect(() => {
+        setSearchQuery(initialSearchQuery);
+    }, [initialSearchQuery]);
 
     const onSearch = (query: string) => {
         setSearchQuery(query);

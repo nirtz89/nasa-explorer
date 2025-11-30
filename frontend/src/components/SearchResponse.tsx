@@ -26,19 +26,22 @@ const SearchResponse: React.FC<SearchResponseProps> = ({ query }) => {
   const { setHistory, history } = useAppContext();
 
   useEffect(() => {
+    if (isLoading) {
+      return;
+    }
     const formattedTimestamp = formatDate(new Date());
     const newHistory = [
-      ...history,
       {
         query,
         timestamp: formattedTimestamp,
         isFavorite: false,
         numberOfResults: searchData?.length || 0
-      }
+      },
+      ...history
     ];
     setHistory(newHistory);
     replaceFullHistoryInLocalStorage(newHistory);
-  }, [query]);
+  }, [query, isLoading]);
 
   const getThumbnail = (item: CollectionItem) => {
     const thumbnailLink = item.links?.find((link: ImageLink) => link.rel === 'preview');

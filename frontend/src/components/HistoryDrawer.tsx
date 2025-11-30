@@ -96,8 +96,9 @@ const HistoryDrawer: React.FC = () => {
 
             return (
               <div key={item.timestamp} className="flex flex-row items-start justify-between w-full px-4 py-6 gap-4 hover:bg-gray-100 rounded-md">
-                <p className="text-gray-500 text-sm flex-1 line-clamp-2 overflow-hidden text-ellipsis">
-                  {item.query}
+                <p className="flex flex-col text-gray-500 text-sm flex-1 line-clamp-2 overflow-hidden text-ellipsis">
+                  <span className="font-medium">{item.query}</span>
+                  <span className="text-gray-500 text-xs whitespace-nowrap">({item.numberOfResults} results)</span>
                 </p>
                 <div className="flex items-center gap-3 flex-shrink-0">
                   <span className="text-gray-500 text-xs whitespace-nowrap">
@@ -126,25 +127,29 @@ const HistoryDrawer: React.FC = () => {
         )}
         {history.length > 0 && totalPages > 1 && (
           <div className="flex items-center justify-between px-4 py-3 border-t border-gray-200 mt-auto">
-            <button
+            <Button
+              variant="outline"
+              size="sm"
               onClick={handlePreviousPage}
               disabled={currentPage === 1}
-              className="flex items-center gap-1 px-3 py-1 text-sm text-gray-600 hover:text-gray-800 disabled:text-gray-300 disabled:cursor-not-allowed transition-colors"
+              className="text-gray-600 hover:text-gray-800"
             >
               <ChevronLeft className="w-4 h-4" />
               Previous
-            </button>
+            </Button>
             <span className="text-sm text-gray-600">
               Page {currentPage} of {totalPages}
             </span>
-            <button
+            <Button
+              variant="outline"
+              size="sm"
               onClick={handleNextPage}
               disabled={currentPage === totalPages}
-              className="flex items-center gap-1 px-3 py-1 text-sm text-gray-600 hover:text-gray-800 disabled:text-gray-300 disabled:cursor-not-allowed transition-colors"
+              className="text-gray-600 hover:text-gray-800"
             >
               Next
               <ChevronRight className="w-4 h-4" />
-            </button>
+            </Button>
           </div>
         )}
       </div>
