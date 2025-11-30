@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BentoGrid, BentoGridItem, BentoGridLightBox } from './ui/bento-grid';
 import { useSearch } from '../lib/api/useSearch';
 import { CollectionItem, ImageLink } from '../lib/api/search.types';
 import { Skeleton } from './ui/skeleton';
 import ConfidenceBadge from './ConfidenceBadge';
+import { useAppContext } from '../AppContext';
+import { replaceFullHistoryInLocalStorage, formatDate } from '../lib/utils';
 
 interface ImageData {
   url: string;
@@ -21,6 +23,22 @@ interface SearchResponseProps {
 const SearchResponse: React.FC<SearchResponseProps> = ({ query }) => {
   const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
   const { data: searchData, isLoading, error } = useSearch(query);
+  const { setHistory, history } = useAppContext();
+
+  useEffect(() => {
+    const formattedTimestamp = formatDate(new Date());
+    const newHistory = [
+      ...history,
+      {
+        query,
+        timestamp: formattedTimestamp,
+        isFavorite: false,
+        numberOfResults: searchData?.length || 0
+      }
+    ];
+    setHistory(newHistory);
+    replaceFullHistoryInLocalStorage(newHistory);
+  }, [query]);
 
   const getThumbnail = (item: CollectionItem) => {
     const thumbnailLink = item.links?.find((link: ImageLink) => link.rel === 'preview');

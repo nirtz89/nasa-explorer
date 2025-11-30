@@ -1,5 +1,7 @@
 import React, { createContext, useContext, ReactNode, useState } from 'react';
 import { HistoryItem } from './lib/types';
+import { getHistoryFromLocalStorage } from './lib/utils';
+import mockHistory from './assets/data/mock_history.json';
 
 export enum AppState {
   INITIAL = 'INITIAL',
@@ -20,7 +22,10 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [appState, setAppState] = useState<AppState>(AppState.INITIAL);
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [history, setHistory] = useState<HistoryItem[]>([
+    ...getHistoryFromLocalStorage(),
+    ...(mockHistory as HistoryItem[])
+  ]);
   const value: AppContextType = {
     appState,
     setAppState: (appState: AppState) => {

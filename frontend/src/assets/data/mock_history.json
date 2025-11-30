@@ -1,0 +1,326 @@
+[
+    {
+        "query": "red space shuttle",
+        "timestamp": "Nov 30 at 1:14 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Mission simulator on Mars",
+        "timestamp": "Nov 30 at 1:16 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "James Webb Space Telescope images of deep space",
+        "timestamp": "Nov 29 at 9:23 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Apollo 11 moon landing footage",
+        "timestamp": "Nov 29 at 2:47 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "International Space Station live feed",
+        "timestamp": "Nov 28 at 8:15 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Perseverance rover discoveries on Mars",
+        "timestamp": "Nov 28 at 11:32 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "black hole event horizon visualization",
+        "timestamp": "Nov 27 at 3:55 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Saturn's rings composition and structure",
+        "timestamp": "Nov 27 at 6:20 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Voyager 1 interstellar space mission",
+        "timestamp": "Nov 26 at 10:08 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Hubble Space Telescope nebula photographs",
+        "timestamp": "Nov 26 at 4:12 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Artemis program lunar exploration timeline",
+        "timestamp": "Nov 25 at 9:41 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Jupiter's Great Red Spot storm dynamics",
+        "timestamp": "Nov 25 at 1:27 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "spacewalk procedures and safety protocols",
+        "timestamp": "Nov 24 at 7:33 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Europa moon subsurface ocean exploration",
+        "timestamp": "Nov 24 at 2:19 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "asteroid impact prevention strategies",
+        "timestamp": "Nov 23 at 11:55 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "solar flare effects on Earth's atmosphere",
+        "timestamp": "Nov 23 at 5:07 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Curiosity rover geological findings",
+        "timestamp": "Nov 22 at 8:44 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "exoplanet atmosphere composition analysis",
+        "timestamp": "Nov 22 at 12:38 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space debris tracking and mitigation",
+        "timestamp": "Nov 21 at 10:22 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Mars helicopter Ingenuity flight records",
+        "timestamp": "Nov 21 at 3:16 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "neutron star collision gravitational waves",
+        "timestamp": "Nov 20 at 9:52 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space station module construction process",
+        "timestamp": "Nov 20 at 1:48 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Titan moon methane lakes exploration",
+        "timestamp": "Nov 19 at 7:29 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "solar system formation theories",
+        "timestamp": "Nov 19 at 4:33 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "astronaut training program requirements",
+        "timestamp": "Nov 18 at 11:17 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "dark matter distribution in galaxies",
+        "timestamp": "Nov 18 at 6:25 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "spacecraft reentry heat shield technology",
+        "timestamp": "Nov 17 at 8:56 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Kepler mission exoplanet discoveries",
+        "timestamp": "Nov 17 at 2:14 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "lunar regolith mining possibilities",
+        "timestamp": "Nov 16 at 10:41 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "gamma ray burst detection methods",
+        "timestamp": "Nov 16 at 5:19 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space elevator feasibility studies",
+        "timestamp": "Nov 15 at 9:07 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Venus atmospheric pressure conditions",
+        "timestamp": "Nov 15 at 1:33 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space telescope mirror alignment techniques",
+        "timestamp": "Nov 14 at 8:22 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "asteroid belt composition and origins",
+        "timestamp": "Nov 14 at 3:47 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Mars sample return mission planning",
+        "timestamp": "Nov 13 at 11:09 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "cosmic microwave background radiation",
+        "timestamp": "Nov 13 at 4:28 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space suit life support systems",
+        "timestamp": "Nov 12 at 7:51 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Juno spacecraft Jupiter mission data",
+        "timestamp": "Nov 12 at 12:44 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "interstellar medium composition analysis",
+        "timestamp": "Nov 11 at 9:18 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space station zero gravity experiments",
+        "timestamp": "Nov 11 at 2:56 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Pluto surface features New Horizons",
+        "timestamp": "Nov 10 at 10:33 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "solar wind interaction with magnetosphere",
+        "timestamp": "Nov 10 at 5:12 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space launch vehicle propulsion systems",
+        "timestamp": "Nov 9 at 8:27 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "habitable zone exoplanet candidates",
+        "timestamp": "Nov 9 at 1:55 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space debris removal technology",
+        "timestamp": "Nov 8 at 11:24 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Mercury surface temperature variations",
+        "timestamp": "Nov 8 at 4:38 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space station orbit maintenance procedures",
+        "timestamp": "Nov 7 at 9:46 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "stellar evolution lifecycle stages",
+        "timestamp": "Nov 7 at 3:21 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "Mars helicopter flight path planning",
+        "timestamp": "Nov 6 at 7:58 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space telescope calibration methods",
+        "timestamp": "Nov 6 at 12:17 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "asteroid mining economic viability",
+        "timestamp": "Nov 5 at 10:52 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "space weather prediction models",
+        "timestamp": "Nov 5 at 5:41 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "lunar base construction materials",
+        "timestamp": "Nov 4 at 8:15 AM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    },
+    {
+        "query": "spacecraft communication delay challenges",
+        "timestamp": "Nov 4 at 2:29 PM",
+        "isFavorite": false,
+        "numberOfResults": 0
+    }
+]

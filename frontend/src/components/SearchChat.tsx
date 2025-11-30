@@ -4,7 +4,7 @@ import { Textarea } from './ui/textarea';
 import TypingText from './ui/shadcn-io/typing-text';
 import NASA_LOGO from '../assets/images/nasa.svg';
 import { useAppContext } from '../AppContext';
-import { formatDate, getHistoryFromLocalStorage, saveHistoryToLocalStorage } from '../lib/utils';
+import { formatDate } from '../lib/utils';
 
 interface Message {
     id: number;
@@ -46,7 +46,6 @@ const SearchChat: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch 
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const { setHistory } = useAppContext();
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -68,8 +67,6 @@ const SearchChat: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch 
         setMessages((prev) => [...prev, userMessage]);
         setInputValue('');
         setIsLoading(true);
-        saveHistoryToLocalStorage(inputValue.trim());
-        setHistory(getHistoryFromLocalStorage());
 
         // Simulate response after 1.5 seconds
         setTimeout(() => {
