@@ -7,6 +7,8 @@ interface ImageData {
   thumbnail: string;
   width?: number;
   height?: number;
+  title?: string;
+  description?: string;
 }
 
 const items = data.collection.items.sort(() => Math.random() - 0.5);
@@ -27,6 +29,7 @@ const Gallery: React.FC = () => {
 
     const fullImage = largeImage || mediumImage || thumbnail;
     const thumbnailUrl = getThumbnail(item);
+    const itemData = item.data?.[0];
 
     if (!fullImage || !thumbnailUrl) return null;
 
@@ -35,6 +38,8 @@ const Gallery: React.FC = () => {
       thumbnail: thumbnailUrl,
       width: fullImage.width,
       height: fullImage.height,
+      title: itemData?.title,
+      description: itemData?.description,
     };
   };
 
@@ -98,6 +103,8 @@ const Gallery: React.FC = () => {
         thumbnail={selectedImage?.thumbnail}
         width={selectedImage?.width}
         height={selectedImage?.height}
+        title={selectedImage?.title}
+        description={selectedImage?.description}
         isOpen={!!selectedImage}
         onClose={() => setSelectedImage(null)}
       />

@@ -30,6 +30,8 @@ export const BentoGridLightBox = ({
   isOpen,
   onClose,
   className,
+  title,
+  description,
 }: {
   image?: string;
   thumbnail?: string;
@@ -38,6 +40,8 @@ export const BentoGridLightBox = ({
   isOpen: boolean;
   onClose: () => void;
   className?: string;
+  title?: string;
+  description?: string;
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [displaySize, setDisplaySize] = useState<{ width: string; height: string }>({
@@ -175,6 +179,21 @@ export const BentoGridLightBox = ({
             style={displaySize}
             onLoad={() => setImageLoaded(true)}
           />
+
+          {(title || description) && (
+            <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md border-t border-white/10 p-6 text-white transition-opacity duration-300 hover:bg-black/40">
+              {title && (
+                <h3 className="mb-2 text-xl font-bold leading-tight text-white drop-shadow-md">
+                  {title}
+                </h3>
+              )}
+              {description && (
+                <p className="line-clamp-3 text-sm text-white/90 drop-shadow-sm">
+                  {description}
+                </p>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -10,6 +10,8 @@ interface ImageData {
   thumbnail: string;
   width?: number;
   height?: number;
+  title?: string;
+  description?: string;
 }
 
 interface SearchResponseProps {
@@ -32,6 +34,7 @@ const SearchResponse: React.FC<SearchResponseProps> = ({ query }) => {
 
     const fullImage = largeImage || mediumImage || thumbnail;
     const thumbnailUrl = getThumbnail(item);
+    const itemData = item.data?.[0];
 
     if (!fullImage || !thumbnailUrl) return null;
 
@@ -40,6 +43,8 @@ const SearchResponse: React.FC<SearchResponseProps> = ({ query }) => {
       thumbnail: thumbnailUrl,
       width: fullImage.width,
       height: fullImage.height,
+      title: itemData?.title,
+      description: itemData?.description,
     };
   };
 
@@ -102,6 +107,8 @@ const SearchResponse: React.FC<SearchResponseProps> = ({ query }) => {
         thumbnail={selectedImage?.thumbnail}
         width={selectedImage?.width}
         height={selectedImage?.height}
+        title={selectedImage?.title}
+        description={selectedImage?.description}
         isOpen={!!selectedImage}
         onClose={() => setSelectedImage(null)}
       />

@@ -7,12 +7,13 @@ import { AppState, useAppContext } from '../AppContext';
 const SearchInput: React.FC = () => {
   const [focused, setFocused] = useState(false);
   const [value, setValue] = useState('');
-  const { setAppState } = useAppContext();
+  const { setAppState, setSearchQuery } = useAppContext();
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setValue(e.target.value);
     if (e.nativeEvent instanceof InputEvent && e.nativeEvent.inputType === "insertLineBreak") {
       setAppState(AppState.SEARCH);
+      setSearchQuery(value.trim());
       e.preventDefault();
       return;
     }

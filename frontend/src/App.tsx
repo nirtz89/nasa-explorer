@@ -13,7 +13,7 @@ import { AppState, useAppContext } from './AppContext';
 
 const App: React.FC = () => {
 
-  const { appState } = useAppContext();
+  const { appState, searchQuery } = useAppContext();
 
   return (
     <div className="min-h-screen relative">
